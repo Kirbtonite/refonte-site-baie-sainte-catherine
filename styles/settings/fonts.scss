@@ -1,0 +1,21 @@
+/* ==========================================================================
+   FONTS / SETTINGS
+   ========================================================================== */
+/// Font family
+:root {
+    --font-primary: 'Quicksand', sans-serif;
+    --font-secondary: 'Fira Code', monospace;
+
+    --font-size-content: #{typo(16px, 24px)};
+
+    /// Grosseur des textes
+    --font-size-h1: #{typo(28px, 78px)};
+    --font-size-h2: #{typo(28px, 60px)};
+    --font-size-h4: #{typo(18px, 32px)};
+    --font-size-h5: #{typo(14px, 24px)};
+    --font-size-small: #{typo(10px, 20px)};
+    --font-size-credits: #{typo(14px, 16px)};
+}
+p {
+    margin: 0;
+}

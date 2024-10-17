@@ -1,368 +1,256 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Baie-Sainte_Catherine</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="styles/main.css" />
-    <script src="scripts/main.js" defer></script>
-</head>
-
-<body data-component="Scrolly" data-no-repeat>
-    <div class="top__bar">
-        <div class="wrapper">
-            <p>fr</p>
-            <input type="text" placeholder="Recherche">
-            <button>
-                <svg class="icon icon--md">
-                    <use xlink:href="#icon-search"></use>
-                </svg>
-            </button>
-
+{% include "_partials/_header.html" %}
+<section class="hero__nous__joindre">
+    <h1>Nous joindre</h1>
+    <img src="assets/images/hero_nous_joindre.png" alt="Hero accueil" />
+</section>
+<section class="nous__joindre">
+    <div class="wrapper">
+        <div class="infos__contacts" data-scrolly="fromLeft">
+            <h4>Édifice municipal Albert-Boulianne</h4>
+            <p class="adresses">308, rue Leclerc Baie-Sainte-Catherine Québec, G0T 1A0</p>
+            <div class="telephones">
+                <p>Téléphone : 418-620-5020</p>
+                <p>Télécopieur: 418-620-5021</p>
+            </div>
+            <a href="mailto:municipalite@baiestecatherine.com" class="courriel">municipalite@baiestecatherine.com</a>
+            <div class="opening__hours">
+                <p>Heures de bureau:</p>
+                <p>lundi - jeudi = 8h30-12h00 / 13h00-16h30</p>
+                <p>vendredi = fermé</p>
+            </div>
+        </div>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.3544424859947!2d-69.72841452408429!3d48.10339795354062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbfd34067bfe285%3A0xae922643575fa27b!2s308%20Rue%20Leclerc%2C%20Baie-Sainte-Catherine%2C%20QC%20G0T%201A0!5e0!3m2!1sen!2sca!4v1714692046394!5m2!1sen!2sca"
+                width="680"
+                height="500"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
         </div>
     </div>
-    <header class="header" data-component="Header" data-treshold="0.2" data-auto-hide>
-        <div class="wrapper">
-
-            <a href="index.html" class="logo__toggle"><img src="assets/images/logo_baie_sainte_catherine.svg" alt="Baie-Sainte-Catherine"></a>
-            <a href="index.html" class="logo__mobile"><img src="assets/images/logo_mobile.svg" alt="Baie-Sainte-Catherine"></a>
-            <nav class="header__nav nav-primary">
-                <ul>
-                    <li><a href="index.html" class="nav-primary__item">Ville</a></li>
-                    <li><a href="index.html" class="nav-primary__item">Citoyen</a></li>
-                    <li><a href="index.html" class="nav-primary__item">Urbanisme</a></li>
-                    <li><a href="#" class="nav-primary__item">Loisir et Tourisme</a></li>
-                    <li><a href="nous-joindre.html" class="nav-primary__item">Nous Joindre</a></li>
-                </ul>
-            </nav>
-            <div class="top__bar__mobile">
-                <p>fr</p>
-                <svg class="icon icon--xl">
-                    <use xlink:href="#icon-search"></use>
+</section>
+<section class="contacts__team" data-component="Accordion" data-not-closing>
+    <div class="wrapper">
+        <h2>Contacter notre équipe municipale</h2>
+        <div class="accordion__container js-header">
+            <div class="accordion__header">
+                <h4>Direction et administration générale, bibliothèque municipale Bernadette-Dallaire</h4>
+                <svg class="icon icon--md icon-open">
+                    <use xlink:href="#icon-plus_expand"></use>
                 </svg>
-                <button class="header__toggle js-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <svg class="icon icon--md icon-close">
+                    <use xlink:href="#icon-minus-close"></use>
+                </svg>
             </div>
-
-
-        </div>
-    </header>
-    <section class="hero__nous__joindre">
-        <h1>Nous joindre</h1>
-        <img src="assets/images/hero_nous_joindre.png" alt="Hero accueil" />
-    </section>
-    <section class="nous__joindre">
-        <div class="wrapper">
-            <div class="infos__contacts" data-scrolly="fromLeft">
-                <h4>Édifice municipal Albert-Boulianne</h4>
-                <p class="adresses">308, rue Leclerc Baie-Sainte-Catherine Québec, G0T 1A0</p>
-                <div class="telephones">
-                    <p>Téléphone : 418-620-5020</p>
-                    <p>Télécopieur: 418-620-5021</p>
-                </div>
-                <a href="mailto:municipalite@baiestecatherine.com" class="courriel">municipalite@baiestecatherine.com</a>
-                <div class="opening__hours">
-                    <p>Heures de bureau:</p>
-                    <p>lundi - jeudi = 8h30-12h00 / 13h00-16h30</p>
-                    <p>vendredi = fermé</p>
-                </div>
-            </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.3544424859947!2d-69.72841452408429!3d48.10339795354062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cbfd34067bfe285%3A0xae922643575fa27b!2s308%20Rue%20Leclerc%2C%20Baie-Sainte-Catherine%2C%20QC%20G0T%201A0!5e0!3m2!1sen!2sca!4v1714692046394!5m2!1sen!2sca" width="680" height="500" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-    <section class="contacts__team" data-component="Accordion" data-not-closing>
-        <div class="wrapper">
-            <h2>Contacter notre équipe municipale</h2>
-            <div class="accordion__container js-header">
-                <div class="accordion__header">
-                    <h4>Direction et administration générale, bibliothèque municipale Bernadette-Dallaire</h4>
-                    <svg class="icon icon--md icon-open">
-                        <use xlink:href="#icon-plus_expand"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-close">
-                        <use xlink:href="#icon-minus-close"></use>
-                    </svg>
-                </div>
-                <div class="accordion__content">
-                    <div class="infos__members">
-                        <div class="infos__member">
-                            <h4>Mariève Bouchard</h4>
-                            <p>Directrice-générale / secrétaire-trésorière</p>
-                            <p>418-620-5020 poste 5801</p>
-                            <a href="mailto:municipalite@baiestecatherine.com">municipalite@baiestecatherine.com</a>
-                        </div>
-                        <div class="infos__member">
-                            <h4>Patricia Ouellet</h4>
-                            <p>bibliothécaire en chef </p>
-                            <p>418-620-5020 poste 5803</p>
-                            <a href="mailto:municipalite@baiestecatherine.com">municipalite@baiestecatherine.com</a>
-                        </div>
+            <div class="accordion__content">
+                <div class="infos__members">
+                    <div class="infos__member">
+                        <h4>Mariève Bouchard</h4>
+                        <p>Directrice-générale / secrétaire-trésorière</p>
+                        <p>418-620-5020 poste 5801</p>
+                        <a href="mailto:municipalite@baiestecatherine.com">municipalite@baiestecatherine.com</a>
                     </div>
-                </div>
-            </div>
-
-            <div class="accordion__container js-header">
-                <div class="accordion__header">
-                    <h4>Hygiène du milieu, urbanisme / inspection municipale, service incendie</h4>
-                    <svg class="icon icon--md icon-open">
-                        <use xlink:href="#icon-plus_expand"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-close">
-                        <use xlink:href="#icon-minus-close"></use>
-                    </svg>
-                </div>
-                <div class="accordion__content">
-                    <div class="infos__members">
-                        <div class="infos__member">
-                            <h4>Justin Gingras</h4>
-                            <p>Inspecteur municipal de Saint-Siméon</p>
-                            <a href="mailto:inspecteur@baiestecatherine.com">inspecteur@baiestecatherine.com</a>
-                        </div>
-                        <div class="infos__member">
-                            <h4>Michel Boulianne</h4>
-                            <p>Directeur de la gestion des matières résiduelles et des bâtiments</p>
-                            <p>418-620-5020</p>
-                            <a href="mailto:municipalite@baiestecatherine.com">municipalite@baiestecatherine.com</a>
-                        </div>
-                        <div class="infos__member">
-                            <h4>Patricia Ouellet</h4>
-                            <p>bibliothécaire en chef </p>
-                            <p>418-439-3947 poste 5005</p>
-                            <a href="mailto:michel.boulianne@mrccharlevoixest.ca">michel.boulianne@mrccharlevoixest.ca</a>
-                        </div>
-                        <div class="infos__member">
-                            <h4>Patricia Ouellet</h4>
-                            <p>bibliothécaire en chef </p>
-                            <p>418-620-5020 poste 5803</p>
-                            <a href="mailto:municipalite@baiestecatherine.com">municipalite@baiestecatherine.com</a>
-                        </div>
-                        <div class="infos__member">
-                            <h4>Yves Gauthier</h4>
-                            <p>Agent d’intervention en sécurité civile et incendie</p>
-                            <p>418-235-4887</p>
-                        </div>
-                        <div class="infos__member">
-                            <h4>Mélanie Lapointe</h4>
-                            <p>Préventionniste du Groupe GPI</p>
-                            <p>Technicienne en Prévention Incendie</p>
-                            <p>514-996-7645</p>
-                        </div>
+                    <div class="infos__member">
+                        <h4>Patricia Ouellet</h4>
+                        <p>bibliothécaire en chef </p>
+                        <p>418-620-5020 poste 5803</p>
+                        <a href="mailto:municipalite@baiestecatherine.com">municipalite@baiestecatherine.com</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="civil__form">
-        <div class="wrapper">
-            <h2>Formulaire Requête citoyenne</h2>
-            <h5>Informations personelles</h5>
-            <form action="#" class="form" data-component="Form" data-scrolly="close">
-                <div class="form__body">
-                    <fieldset class="grid">
-                        <div class="input">
-                            <label class="input__label" for="first name">Prénom</label>
-                            <input class="input__element" type="text" name="first name" id="first name" placeholder="Ex : Patrice" required />
-                            <p class="error__text">Le prénom est nécessaire!</p>
-                        </div>
 
-                        <div class="input">
-                            <label class="input__label" for="last name">Nom</label>
-                            <input class="input__element" type="text" name="last name" id="last name" placeholder="Ex : Tremblay" required />
-                            <p class="error__text">Le nom est nécessaire!</p>
-                        </div>
+        <div class="accordion__container js-header">
+            <div class="accordion__header">
+                <h4>Hygiène du milieu, urbanisme / inspection municipale, service incendie</h4>
+                <svg class="icon icon--md icon-open">
+                    <use xlink:href="#icon-plus_expand"></use>
+                </svg>
+                <svg class="icon icon--md icon-close">
+                    <use xlink:href="#icon-minus-close"></use>
+                </svg>
+            </div>
+            <div class="accordion__content">
+                <div class="infos__members">
+                    <div class="infos__member">
+                        <h4>Justin Gingras</h4>
+                        <p>Inspecteur municipal de Saint-Siméon</p>
+                        <a href="mailto:inspecteur@baiestecatherine.com">inspecteur@baiestecatherine.com</a>
+                    </div>
+                    <div class="infos__member">
+                        <h4>Michel Boulianne</h4>
+                        <p>Directeur de la gestion des matières résiduelles et des bâtiments</p>
+                        <p>418-620-5020</p>
+                        <a href="mailto:municipalite@baiestecatherine.com">municipalite@baiestecatherine.com</a>
+                    </div>
+                    <div class="infos__member">
+                        <h4>Patricia Ouellet</h4>
+                        <p>bibliothécaire en chef </p>
+                        <p>418-439-3947 poste 5005</p>
+                        <a href="mailto:michel.boulianne@mrccharlevoixest.ca">michel.boulianne@mrccharlevoixest.ca</a>
+                    </div>
+                    <div class="infos__member">
+                        <h4>Patricia Ouellet</h4>
+                        <p>bibliothécaire en chef </p>
+                        <p>418-620-5020 poste 5803</p>
+                        <a href="mailto:municipalite@baiestecatherine.com">municipalite@baiestecatherine.com</a>
+                    </div>
+                    <div class="infos__member">
+                        <h4>Yves Gauthier</h4>
+                        <p>Agent d’intervention en sécurité civile et incendie</p>
+                        <p>418-235-4887</p>
+                    </div>
+                    <div class="infos__member">
+                        <h4>Mélanie Lapointe</h4>
+                        <p>Préventionniste du Groupe GPI</p>
+                        <p>Technicienne en Prévention Incendie</p>
+                        <p>514-996-7645</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="civil__form">
+    <div class="wrapper">
+        <h2>Formulaire Requête citoyenne</h2>
+        <h5>Informations personelles</h5>
+        <form action="#" class="form" data-component="Form" data-scrolly="close">
+            <div class="form__body">
+                <fieldset class="grid">
+                    <div class="input">
+                        <label class="input__label" for="first name">Prénom</label>
+                        <input class="input__element" type="text" name="first name" id="first name" placeholder="Ex : Patrice" required />
+                        <p class="error__text">Le prénom est nécessaire!</p>
+                    </div>
 
-                        <div class="input">
-                            <label class="input__label" for="address">Adresse</label>
-                            <input class="input__element" type="text" name="address" id="address" placeholder="Ex : 1583 Rue Sainte-Charles" required />
-                            <p class="error__text">L’adresse n’est pas correct!</p>
-                        </div>
+                    <div class="input">
+                        <label class="input__label" for="last name">Nom</label>
+                        <input class="input__element" type="text" name="last name" id="last name" placeholder="Ex : Tremblay" required />
+                        <p class="error__text">Le nom est nécessaire!</p>
+                    </div>
 
-                        <div class="input">
-                            <label class="input__label" for="postal code">Code postal</label>
-                            <input class="input__element" type="text" name="postal code" id="postal code" placeholder="Ex : J3S 9T1" required />
-                            <p class="error__text">Le code postal n’est pas correct!</p>
-                        </div>
+                    <div class="input">
+                        <label class="input__label" for="address">Adresse</label>
+                        <input class="input__element" type="text" name="address" id="address" placeholder="Ex : 1583 Rue Sainte-Charles" required />
+                        <p class="error__text">L’adresse n’est pas correct!</p>
+                    </div>
 
-                        <div class="input">
-                            <label class="input__label" for="city">Ville</label>
-                            <input class="input__element" type="text" name="city" id="city" placeholder="Ex : Montréal" required />
-                            <p class="error__text">Le nom de la ville n’est pas correct!</p>
-                        </div>
+                    <div class="input">
+                        <label class="input__label" for="postal code">Code postal</label>
+                        <input class="input__element" type="text" name="postal code" id="postal code" placeholder="Ex : J3S 9T1" required />
+                        <p class="error__text">Le code postal n’est pas correct!</p>
+                    </div>
 
-                        <div class="input select">
-                            <label class="input__label" for="province">Provinces</label>
-                            <select name="province" id="province" class="input__element" required>
-                                <option value="" hidden>Choisir une province</option>
-                                <option value="qc">Québec</option>
-                                <option value="on">Ontario</option>
-                                <option value="mb">Manitoba</option>
-                                <option value="sk">Saskatchewan</option>
-                                <option value="ab">Alberta</option>
-                                <option value="bc">Colombie-Britannique</option>
-                                <option value="nb">Nouveau-Brunswick</option>
-                                <option value="pe">Île-du-Prince-Édouard</option>
-                                <option value="nl">Terre-Neuve et Labrador</option>
-                                <option value="ns">Nouvelle-Écosse</option>
-                                <option value="yk">Yukon</option>
-                                <option value="nt">Territoire-du-Nord-Ouest</option>
-                                <option value="nu">Nunavut</option>
-                            </select>
-                            <p class="error__text">Vous devrez choisir une province!</p>
-                        </div>
-                        <div class="input">
-                            <label class="input__label" for="phone">Numéro de téléphone</label>
-                            <input class="input__element" type="tel" name="phone" id="phone" placeholder="Ex : (514) 594 5827" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
-                            <p class="error__text">Le numéro de téléphone n’est pas correct!</p>
-                        </div>
+                    <div class="input">
+                        <label class="input__label" for="city">Ville</label>
+                        <input class="input__element" type="text" name="city" id="city" placeholder="Ex : Montréal" required />
+                        <p class="error__text">Le nom de la ville n’est pas correct!</p>
+                    </div>
 
-                        <div class="input">
-                            <label class="input__label" for="email">Adresse courriel</label>
-                            <input class="input__element" type="email" name="email" id="email" placeholder="Ex : patrice.tremblay@gmail.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required />
-                            <p class="error__text">L’adresse courriel n’est pas correct!</p>
-                        </div>
+                    <div class="input select">
+                        <label class="input__label" for="province">Provinces</label>
+                        <select name="province" id="province" class="input__element" required>
+                            <option value="" hidden>Choisir une province</option>
+                            <option value="qc">Québec</option>
+                            <option value="on">Ontario</option>
+                            <option value="mb">Manitoba</option>
+                            <option value="sk">Saskatchewan</option>
+                            <option value="ab">Alberta</option>
+                            <option value="bc">Colombie-Britannique</option>
+                            <option value="nb">Nouveau-Brunswick</option>
+                            <option value="pe">Île-du-Prince-Édouard</option>
+                            <option value="nl">Terre-Neuve et Labrador</option>
+                            <option value="ns">Nouvelle-Écosse</option>
+                            <option value="yk">Yukon</option>
+                            <option value="nt">Territoire-du-Nord-Ouest</option>
+                            <option value="nu">Nunavut</option>
+                        </select>
+                        <p class="error__text">Vous devrez choisir une province!</p>
+                    </div>
+                    <div class="input">
+                        <label class="input__label" for="phone">Numéro de téléphone</label>
+                        <input
+                            class="input__element"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder="Ex : (514) 594 5827"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            required
+                        />
+                        <p class="error__text">Le numéro de téléphone n’est pas correct!</p>
+                    </div>
 
-                        <fieldset>
-                            <p>Méthode préférée pour vous joindre</p>
-                            <div class="radios" data-input-container>
-                                <div class="input radio">
-                                    <input class="input__element" type="radio" name="join[]" id="join1" value="Courriel" required />
+                    <div class="input">
+                        <label class="input__label" for="email">Adresse courriel</label>
+                        <input
+                            class="input__element"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Ex : patrice.tremblay@gmail.com"
+                            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                            required
+                        />
+                        <p class="error__text">L’adresse courriel n’est pas correct!</p>
+                    </div>
 
-                                    <label class="input__label" for="join1">Courriel</label>
-                                </div>
-                                <div class="input radio">
-                                    <input class="input__element" type="radio" name="join[]" id="join2" value="Telephone" required />
+                    <fieldset>
+                        <p>Méthode préférée pour vous joindre</p>
+                        <div class="radios" data-input-container>
+                            <div class="input radio">
+                                <input class="input__element" type="radio" name="join[]" id="join1" value="Courriel" required />
 
-                                    <label class="input__label" for="join2">Téléphone</label>
-                                </div>
-                                <p class="error__text">Le choix est obligatoire!</p>
+                                <label class="input__label" for="join1">Courriel</label>
                             </div>
-                        </fieldset>
-                        <div class="requete__citoyenne u-grid-fullwidth">
-                            <h5>Requête citoyenne</h5>
-                            <div class="input select">
-                                <label class="input__label" for="subjet">Sujet</label>
-                                <select name="subjet" id="subjet" class="input__element" required>
-                                    <option value="" hidden>Choisir un sujet</option>
-                                    <option value="permit">Permit de stationnement</option>
-                                    <option value="ask">Demande de renseignement</option>
-                                    <option value="reserve">Réservation de salle</option>
-                                </select>
-                                <p class="error__text">Vous devrez choisir un sujet!</p>
-                            </div>
+                            <div class="input radio">
+                                <input class="input__element" type="radio" name="join[]" id="join2" value="Telephone" required />
 
-                            <div class="input textarea u-grid-fullwidth">
-                                <label class="input__label" for="comment">Commentaire</label>
-                                <textarea class="input__element" name="comment" id="comment" maxlength="500" required></textarea>
-                                <p class="error__text">Une commentaire est nécessaire!</p>
+                                <label class="input__label" for="join2">Téléphone</label>
                             </div>
-
-                            <div class="input checkbox">
-                                <input class="input__element" type="checkbox" name="optin[]" id="optin" value="true" required />
-                                <label class="input__label" for="optin">En rempilant cette formulaire, vous consentez aux conditions d’utilisateur</label>
-                                <p class="error__text">Vous devrez acepter les conditions d’utilisateur!</p>
-                            </div>
+                            <p class="error__text">Le choix est obligatoire!</p>
                         </div>
                     </fieldset>
-                    <footer class="form__footer">
-                        <button class="button">Soumettre</button>
-                    </footer>
-                </div>
+                    <div class="requete__citoyenne u-grid-fullwidth">
+                        <h5>Requête citoyenne</h5>
+                        <div class="input select">
+                            <label class="input__label" for="subjet">Sujet</label>
+                            <select name="subjet" id="subjet" class="input__element" required>
+                                <option value="" hidden>Choisir un sujet</option>
+                                <option value="permit">Permit de stationnement</option>
+                                <option value="ask">Demande de renseignement</option>
+                                <option value="reserve">Réservation de salle</option>
+                            </select>
+                            <p class="error__text">Vous devrez choisir un sujet!</p>
+                        </div>
 
-                <div class="form__confirmation">
-                    <h2>Merci</h2>
-                    <p>Votre formulaire a bien été soumis</p>
-                </div>
-            </form>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="wrapper">
-            <div class="infos__site">
-                <div class="logo__footer__mobile">
-                    <a href="#" class="logo"><img src="assets/images/logo_baie_sainte_catherine_dark_mode.svg" alt="Baie-Sainte-Catherine"></a>
-                </div>
-                <div class="infos__contacts">
-                    <span class="nom__edifice">Édifice municipal Albert-Boulianne</span>
-                    <p class="adresses">308, rue Leclerc
-                        Baie-Sainte-Catherine
-                        Québec, G0T 1A0</p>
-                    <div class="telephones">
-                        <p>Téléphone : 418-620-5020</p>
-                        <p>Télécopieur: 418-620-5021</p>
-                    </div>
-                    <a href="mailto:municipalite@baiestecatherine.com" class="courriel">municipalite@baiestecatherine.com</a>
+                        <div class="input textarea u-grid-fullwidth">
+                            <label class="input__label" for="comment">Commentaire</label>
+                            <textarea class="input__element" name="comment" id="comment" maxlength="500" required></textarea>
+                            <p class="error__text">Une commentaire est nécessaire!</p>
+                        </div>
 
-                </div>
-                <div class="extra__infos">
-                    <div class="logo__footer">
-                        <a href="#" class="logo"><img src="assets/images/logo_baie_sainte_catherine_dark_mode.svg" alt="Baie-Sainte-Catherine"></a>
-                    </div>
-                    <div class="info__lettre">
-                        <h4>Abonnez-vous à l’info-lettre</h4>
-                        <div class="info__lettre__field">
-                            <input type="text" placeholder="Adresse courriel">
-                            <button href="#" class="btn__info__lettre">
-                                <svg class="icon icon--sm">
-                                    <use xlink:href="#icon-send_letter"></use>
-                                </svg>
-                            </button>
+                        <div class="input checkbox">
+                            <input class="input__element" type="checkbox" name="optin[]" id="optin" value="true" required />
+                            <label class="input__label" for="optin">En rempilant cette formulaire, vous consentez aux conditions d’utilisateur</label>
+                            <p class="error__text">Vous devrez acepter les conditions d’utilisateur!</p>
                         </div>
                     </div>
-                    <div class="social__medias">
-                        <div class="social__media">
-                            <a href="https://twitter.com/?lang=en">
-                                <svg class="icon icon--lg">
-                                    <use xlink:href="#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="social__media">
-                            <a href="https://www.youtube.com/@kirbtonite">
-                                <svg class="icon icon--lg">
-                                    <use xlink:href="#icon-youtube"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="btn__up mobile">
-                            <a href="#">
-                                <svg class="icon icon--lg">
-                                    <use xlink:href="#icon-chevron-up"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn__up">
-                    <a href="#">
-                        <svg class="icon icon--lg">
-                            <use xlink:href="#icon-chevron-up"></use>
-                        </svg>
-                    </a>
-                </div>
+                </fieldset>
+                <footer class="form__footer">
+                    <button class="button">Soumettre</button>
+                </footer>
             </div>
 
-            <div class="credits">
-                <p>TRAVAIL ÉTUDIANT / STUDENT WORK 
-                    Projet fictif réalisé en techniques d'intégration multimédia du Cégep Édouard-Montpetit, sans but commercial.
-                    Les marques commerciales et les droits d'auteur sont la propriété de leurs propriétaires respectifs.</p>
+            <div class="form__confirmation">
+                <h2>Merci</h2>
+                <p>Votre formulaire a bien été soumis</p>
             </div>
-        </div>
-    </footer>
-</body>
-
-</html>
+        </form>
+    </div>
+</section>
+{% include "_partials/_footer.html" %}

@@ -1,0 +1,35 @@
+.nous__joindre .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    @media screen and (min-width: $breakpoint-md) {
+        justify-content: space-between;
+        flex-direction: row;
+        column-gap: 30px;
+    }
+    .infos__contacts {
+        display: flex;
+        width: 100%;
+
+        .adresses,
+        .telephones {
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width: $breakpoint-sm) {
+            flex-direction: column;
+            width: 50%;
+        }
+    }
+
+    .opening__hours {
+        margin-top: 30px;
+    }
+    .courriel {
+        color: var(--color-primary);
+        &:hover {
+            color: var(--color-hover);
+        }
+    }
+}

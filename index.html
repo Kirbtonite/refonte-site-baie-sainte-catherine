@@ -1,361 +1,225 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Baie-Sainte_Catherine</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="styles/main.css" />
-    <script src="scripts/main.js" defer></script>
-</head>
-
-<body data-component="Scrolly" data-no-repeat>
-    <div class="top__bar">
-        <div class="wrapper">
-            <p>fr</p>
-            <input type="text" placeholder="Recherche">
-            <button>
-                <svg class="icon icon--md">
-                    <use xlink:href="#icon-search"></use>
-                </svg>
-            </button>
-
+{% include "_partials/_header.html" %}
+<!-- Votre contenu ici -->
+<section class="hero">
+    <div class="video" data-component="Youtube" data-video-id="mDnCPAA3OWw" data-no-controls>
+        <div class="video__media js-youtube">
+            <h1 class="hero__title">Capitale de la Zénitude et des baleines</h1>
+            <img class="js-poster" src="assets/images/hero_accueil.png" alt="Thumbnail vidéo" />
+            <svg class="icon icon--lg">
+                <use xlink:href="#icon-play"></use>
+            </svg>
         </div>
     </div>
-    <header class="header" data-component="Header" data-treshold="0.2" data-auto-hide>
-        <div class="wrapper">
-
-            <a href="index.html" class="logo__toggle"><img src="assets/images/logo_baie_sainte_catherine.svg" alt="Baie-Sainte-Catherine"></a>
-            <a href="index.html" class="logo__mobile"><img src="assets/images/logo_mobile.svg" alt="Baie-Sainte-Catherine"></a>
-            <nav class="header__nav nav-primary">
-                <ul>
-                    <li><a href="index.html" class="nav-primary__item">Ville</a></li>
-                    <li><a href="index.html" class="nav-primary__item">Citoyen</a></li>
-                    <li><a href="index.html" class="nav-primary__item">Urbanisme</a></li>
-                    <li><a href="#" class="nav-primary__item">Loisir et Tourisme</a></li>
-                    <li><a href="nous-joindre.html" class="nav-primary__item">Nous Joindre</a></li>
-                </ul>
-            </nav>
-            <div class="top__bar__mobile">
-                <p>fr</p>
-                <svg class="icon icon--xl">
-                    <use xlink:href="#icon-search"></use>
-                </svg>
-                <button class="header__toggle js-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-
-
-        </div>
-    </header>
-    <!-- Votre contenu ici -->
-    <section class="hero">
-        <div class="video" data-component="Youtube" data-video-id="mDnCPAA3OWw" data-no-controls>
-            <div class="video__media js-youtube">
-                <h1 class="hero__title">Capitale de la Zénitude et des baleines</h1>
-                <img class="js-poster" src="assets/images/hero_accueil.png" alt="Thumbnail vidéo" />
-                <svg class="icon icon--lg">
-                    <use xlink:href="#icon-play"></use>
-                </svg>
-            </div>
-        </div>
-    </section>
-    <section class="actualites">
-        <div class="wrapper">
-            <h2>Actualités</h2>
-            <h4>
-                Découvrez les dernières nouvelles et événements de notre municipalité, restez informé sur les projets en cours et les initiatives communautaires.
-            </h4>
-            <div class="swiper" data-component="Carousel" data-loop="true" data-scrolly="expand">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="assets/images/hero_nous_joindre.png" alt="Photo de l'édicife" />
-                        <div class="text">
-                            <p class="date">20 mars 2024</p>
-                            <h5>COMMUNIQUÉ - Projet de création d'un parc national des Dunes-de-Tadoussac</h5>
-                            <a href="#" class="link__card">Lire la suite</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/hero_nous_joindre.png" alt="Photo de l'édicife" />
-                        <div class="text">
-                            <p class="date">5 mars 2024</p>
-                            <h5>Avis publique de scrutin</h5>
-                            <a href="#" class="link__card">Lire la suite</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/construction.png" alt="Construction" />
-                        <div class="text">
-                            <p class="date">20 mars 2024</p>
-                            <h5>info-travaux</h5>
-                            <a href="#" class="link__card">Lire la suite</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/hero_nous_joindre.png" alt="Photo de l'édicife" />
-                        <div class="text">
-                            <p class="date">29 févier 2024</p>
-                            <h5>Avis public - Séance ordinaire du 4 mars 2024</h5>
-                            <a href="#" class="link__card">Lire la suite</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/images/hero_nous_joindre.png" alt="Photo de l'édicife" />
-                        <div class="text">
-                            <p class="date">27 févier 2024</p>
-                            <h5>Avis public aux propriétaires d'un immeuble et aux occupantes et occupants d'un établissement d'entreprise</h5>
-                            <a href="#" class="link__card">Lire la suite</a>
-                        </div>
+</section>
+<section class="actualites">
+    <div class="wrapper">
+        <h2>Actualités</h2>
+        <h4>
+            Découvrez les dernières nouvelles et événements de notre municipalité, restez informé sur les projets en cours et les initiatives communautaires.
+        </h4>
+        <div class="swiper" data-component="Carousel" data-loop="true" data-scrolly="expand">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/images/hero_nous_joindre.png" alt="Photo de l'édicife" />
+                    <div class="text">
+                        <p class="date">20 mars 2024</p>
+                        <h5>COMMUNIQUÉ - Projet de création d'un parc national des Dunes-de-Tadoussac</h5>
+                        <a href="#" class="link__card">Lire la suite</a>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-slide">
+                    <img src="assets/images/hero_nous_joindre.png" alt="Photo de l'édicife" />
+                    <div class="text">
+                        <p class="date">5 mars 2024</p>
+                        <h5>Avis publique de scrutin</h5>
+                        <a href="#" class="link__card">Lire la suite</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/construction.png" alt="Construction" />
+                    <div class="text">
+                        <p class="date">20 mars 2024</p>
+                        <h5>info-travaux</h5>
+                        <a href="#" class="link__card">Lire la suite</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/hero_nous_joindre.png" alt="Photo de l'édicife" />
+                    <div class="text">
+                        <p class="date">29 févier 2024</p>
+                        <h5>Avis public - Séance ordinaire du 4 mars 2024</h5>
+                        <a href="#" class="link__card">Lire la suite</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/hero_nous_joindre.png" alt="Photo de l'édicife" />
+                    <div class="text">
+                        <p class="date">27 févier 2024</p>
+                        <h5>Avis public aux propriétaires d'un immeuble et aux occupantes et occupants d'un établissement d'entreprise</h5>
+                        <a href="#" class="link__card">Lire la suite</a>
+                    </div>
+                </div>
             </div>
-            <h5 class="link__all"><a href="#">Tous les actualités</a></h5>
+            <div class="swiper-pagination"></div>
         </div>
-    </section>
-    <section class="evenements">
-        <div class="wrapper">
-            <h2>Événements</h2>
-            <h4>Explorez notre calendrier d'événements pour trouver des activités adaptées à tous les âges et à tous les goûts.</h4>
-            <div class="cards" data-scrolly="expand">
-                <div class="card">
+        <h5 class="link__all"><a href="#">Tous les actualités</a></h5>
+    </div>
+</section>
+<section class="evenements">
+    <div class="wrapper">
+        <h2>Événements</h2>
+        <h4>Explorez notre calendrier d'événements pour trouver des activités adaptées à tous les âges et à tous les goûts.</h4>
+        <div class="cards" data-scrolly="expand">
+            <div class="card">
+                <div class="card__media">
+                    <a href="#"><img src="assets/images/fishing_event.png" alt="concours de pêche" /></a>
+                </div>
+                <div class="text card__content">
+                    <p class="date">20 mai 2024</p>
+                    <h5>Concours de pêche</h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__media">
+                    <a href="#"><img src="assets/images/kayak_event.jpg" alt="course de kayak" /></a>
+                </div>
+                <div class="text card__content">
+                    <p class="date">20 mai 2024</p>
+                    <h5>Couse de kayak</h5>
+                </div>
+            </div>
+        </div>
+        <h5 class="link__all"><a href="#">Tous les événements</a></h5>
+    </div>
+</section>
+<section class="activites__touristiques">
+    <div class="wrapper">
+        <h2>Activités touristiques</h2>
+        <h4>Laissez-vous séduire par nos activités nautiques, du kayak paisible aux excursions en bateau excitantes</h4>
+        <div class="activites">
+            <div class="video" data-component="Youtube" data-video-id="mv058RTh754">
+                <div class="video__media js-youtube">
+                    <img class="js-poster" src="assets/images/coastline.png" alt="Spectacle de musique" />
+                    <svg class="icon icon--lg">
+                        <use xlink:href="#icon-play"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card" data-scrolly="fromRight">
                     <div class="card__media">
-                        <a href="#"><img src="assets/images/fishing_event.png" alt="concours de pêche" /></a>
+                        <a href="#"><img src="assets/images/kayak.png" alt="kayak" /></a>
                     </div>
-                    <div class="text card__content">
-                        <p class="date">20 mai 2024</p>
-                        <h5>Concours de pêche</h5>
+                    <div class="card__content">
+                        <h5>Kayak Katabatik</h5>
+                        <a href="#" class="link__card">En savoir plus</a>
                     </div>
                 </div>
-                <div class="card">
+
+                <div class="card" data-scrolly="fromRight">
                     <div class="card__media">
-                        <a href="#"><img src="assets/images/kayak_event.jpg" alt="course de kayak" /></a>
+                        <a href="#"><img src="assets/images/whale_tourism.jpg" alt="baleine" /></a>
                     </div>
-                    <div class="text card__content">
-                        <p class="date">20 mai 2024</p>
-                        <h5>Couse de kayak</h5>
+                    <div class="card__content">
+                        <h5>Croisière aux baleines</h5>
+                        <a href="#" class="link__card">En savoir plus</a>
+                    </div>
+                </div>
+
+                <div class="card" data-scrolly="fromRight">
+                    <div class="card__media">
+                        <a href="#"><img src="assets/images/church.jpg" alt="église" /></a>
+                    </div>
+                    <div class="card__content">
+                        <h5>La Pointe-aux-Alouettes</h5>
+                        <a href="#" class="link__card">En savoir plus</a>
                     </div>
                 </div>
             </div>
-            <h5 class="link__all"><a href="#">Tous les événements</a></h5>
         </div>
-    </section>
-    <section class="activites__touristiques">
-        <div class="wrapper">
-            <h2>Activités touristiques</h2>
-            <h4>Laissez-vous séduire par nos activités nautiques, du kayak paisible aux excursions en bateau excitantes</h4>
-            <div class="activites">
-                <div class="video" data-component="Youtube" data-video-id="mv058RTh754">
-                    <div class="video__media js-youtube">
-                        <img class="js-poster" src="assets/images/coastline.png" alt="Spectacle de musique" />
-                        <svg class="icon icon--lg">
-                            <use xlink:href="#icon-play"></use>
+        <h5 class="link__all"><a href="#">Tous les activités</a></h5>
+    </div>
+</section>
+<section class="section__liens__rapides">
+    <div class="wrapper">
+        <h2>Liens rapides</h2>
+        <div class="links">
+            <div class="left__links" data-scrolly="fromLeft">
+                <a href="#" class="lien__rapide">
+                    <div class="link__content">
+                        <svg class="icon icon--xl fill">
+                            <use xlink:href="#icon-permis"></use>
                         </svg>
+                        <h4>Demande de permis</h4>
                     </div>
-                </div>
-                <div class="cards">
-                    <div class="card" data-scrolly="fromRight">
-                        <div class="card__media">
-                            <a href="#"><img src="assets/images/kayak.png" alt="kayak" /></a>
-                        </div>
-                        <div class="card__content">
-                            <h5>Kayak Katabatik</h5>
-                            <a href="#" class="link__card">En savoir plus</a>
-                        </div>
-                    </div>
+                </a>
 
-                    <div class="card" data-scrolly="fromRight">
-                        <div class="card__media">
-                            <a href="#"><img src="assets/images/whale_tourism.jpg" alt="baleine" /></a>
-                        </div>
-                        <div class="card__content">
-                            <h5>Croisière aux baleines</h5>
-                            <a href="#" class="link__card">En savoir plus</a>
-                        </div>
-                    </div>
-
-                    <div class="card" data-scrolly="fromRight">
-                        <div class="card__media">
-                            <a href="#"><img src="assets/images/church.jpg" alt="église" /></a>
-                        </div>
-                        <div class="card__content">
-                            <h5>La Pointe-aux-Alouettes</h5>
-                            <a href="#" class="link__card">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <h5 class="link__all"><a href="#">Tous les activités</a></h5>
-        </div>
-    </section>
-    <section class="section__liens__rapides">
-        <div class="wrapper">
-            <h2>Liens rapides</h2>
-            <div class="links">
-                <div class="left__links" data-scrolly="fromLeft">
-                    <a href="#" class="lien__rapide">
-                        <div class="link__content">
-                            <svg class="icon icon--xl fill">
-                                <use xlink:href="#icon-permis"></use>
-                            </svg>
-                            <h4>Demande de permis</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="lien__rapide">
-                        <div class="link__content">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-trashcan"></use>
-                            </svg>
-                            <h4>Horaire des collections</h4>
-                        </div>
-                    </a>
-
-                    <a href="" class="lien__rapide">
-                        <div class="link__content">
-                            <svg class="icon icon--xl fill">
-                                <use xlink:href="#icon-tax"></use>
-                            </svg>
-                            <h4>Taxes municipaux</h4>
-                        </div>
-                    </a>
-
-                    <a href="" class="lien__rapide">
-                        <div class="link__content">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-parking"></use>
-                            </svg>
-                            <h4>Stationnement</h4>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="right__links" data-scrolly="fromRight">
-                    <a href="#" class="lien__rapide">
-                        <div class="link__content">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-briefcase"></use>
-                            </svg>
-                            <h4>Offres d’emplois</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="lien__rapide">
-                        <div class="link__content">
-                            <svg class="icon icon--xl fill">
-                                <use xlink:href="#icon-map"></use>
-                            </svg>
-                            <h4>Matrice graphique</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="lien__rapide">
-                        <div class="link__content">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-alert_service"></use>
-                            </svg>
-                            <h4>Avis et alerte</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="lien__rapide">
-                        <div class="link__content">
-                            <svg class="icon icon--xl">
-                                <use xlink:href="#icon-book"></use>
-                            </svg>
-                            <h4>Bibliothèque</h4>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="wrapper">
-            <div class="infos__site">
-                <div class="logo__footer__mobile">
-                    <a href="#" class="logo"><img src="assets/images/logo_baie_sainte_catherine_dark_mode.svg" alt="Baie-Sainte-Catherine"></a>
-                </div>
-                <div class="infos__contacts">
-                    <span class="nom__edifice">Édifice municipal Albert-Boulianne</span>
-                    <p class="adresses">308, rue Leclerc
-                        Baie-Sainte-Catherine
-                        Québec, G0T 1A0</p>
-                    <div class="telephones">
-                        <p>Téléphone : 418-620-5020</p>
-                        <p>Télécopieur: 418-620-5021</p>
-                    </div>
-                    <a href="mailto:municipalite@baiestecatherine.com" class="courriel">municipalite@baiestecatherine.com</a>
-
-                </div>
-                <div class="extra__infos">
-                    <div class="logo__footer">
-                        <a href="#" class="logo"><img src="assets/images/logo_baie_sainte_catherine_dark_mode.svg" alt="Baie-Sainte-Catherine"></a>
-                    </div>
-                    <div class="info__lettre">
-                        <h4>Abonnez-vous à l’info-lettre</h4>
-                        <div class="info__lettre__field">
-                            <input type="text" placeholder="Adresse courriel">
-                            <button href="#" class="btn__info__lettre">
-                                <svg class="icon icon--sm">
-                                    <use xlink:href="#icon-send_letter"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="social__medias">
-                        <div class="social__media">
-                            <a href="https://twitter.com/?lang=en">
-                                <svg class="icon icon--lg">
-                                    <use xlink:href="#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="social__media">
-                            <a href="https://www.youtube.com/@kirbtonite">
-                                <svg class="icon icon--lg">
-                                    <use xlink:href="#icon-youtube"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="btn__up mobile">
-                            <a href="#">
-                                <svg class="icon icon--lg">
-                                    <use xlink:href="#icon-chevron-up"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn__up">
-                    <a href="#">
-                        <svg class="icon icon--lg">
-                            <use xlink:href="#icon-chevron-up"></use>
+                <a href="#" class="lien__rapide">
+                    <div class="link__content">
+                        <svg class="icon icon--xl">
+                            <use xlink:href="#icon-trashcan"></use>
                         </svg>
-                    </a>
-                </div>
+                        <h4>Horaire des collections</h4>
+                    </div>
+                </a>
+
+                <a href="" class="lien__rapide">
+                    <div class="link__content">
+                        <svg class="icon icon--xl fill">
+                            <use xlink:href="#icon-tax"></use>
+                        </svg>
+                        <h4>Taxes municipaux</h4>
+                    </div>
+                </a>
+
+                <a href="" class="lien__rapide">
+                    <div class="link__content">
+                        <svg class="icon icon--xl">
+                            <use xlink:href="#icon-parking"></use>
+                        </svg>
+                        <h4>Stationnement</h4>
+                    </div>
+                </a>
             </div>
 
-            <div class="credits">
-                <p>TRAVAIL ÉTUDIANT / STUDENT WORK 
-                    Projet fictif réalisé en techniques d'intégration multimédia du Cégep Édouard-Montpetit, sans but commercial.
-                    Les marques commerciales et les droits d'auteur sont la propriété de leurs propriétaires respectifs.</p>
+            <div class="right__links" data-scrolly="fromRight">
+                <a href="#" class="lien__rapide">
+                    <div class="link__content">
+                        <svg class="icon icon--xl">
+                            <use xlink:href="#icon-briefcase"></use>
+                        </svg>
+                        <h4>Offres d’emplois</h4>
+                    </div>
+                </a>
+
+                <a href="#" class="lien__rapide">
+                    <div class="link__content">
+                        <svg class="icon icon--xl fill">
+                            <use xlink:href="#icon-map"></use>
+                        </svg>
+                        <h4>Matrice graphique</h4>
+                    </div>
+                </a>
+
+                <a href="#" class="lien__rapide">
+                    <div class="link__content">
+                        <svg class="icon icon--xl">
+                            <use xlink:href="#icon-alert_service"></use>
+                        </svg>
+                        <h4>Avis et alerte</h4>
+                    </div>
+                </a>
+
+                <a href="#" class="lien__rapide">
+                    <div class="link__content">
+                        <svg class="icon icon--xl">
+                            <use xlink:href="#icon-book"></use>
+                        </svg>
+                        <h4>Bibliothèque</h4>
+                    </div>
+                </a>
             </div>
         </div>
-    </footer>
-</body>
-
-</html>
+    </div>
+</section>
+{% include "_partials/_footer.html" %}

@@ -1,0 +1,19 @@
+.evenements {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    .wrapper {
+        text-align: center;
+    }
+
+    .link__all {
+        padding: 40px 0;
+        text-align: center;
+    }
+    .card {
+        transition: 0.4s $ease-out-expo;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

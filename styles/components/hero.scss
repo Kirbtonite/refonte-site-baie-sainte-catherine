@@ -1,0 +1,30 @@
+.hero__nous__joindre {
+    position: relative;
+    img {
+        object-fit: fill;
+        height: 100%;
+        width: 100%;
+    }
+    h1 {
+        color: var(--color-white);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+}
+
+.hero__title {
+    opacity: 0;
+    color: var(--color-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    .is-youtube-ready & {
+        opacity: 1;
+    }
+}
