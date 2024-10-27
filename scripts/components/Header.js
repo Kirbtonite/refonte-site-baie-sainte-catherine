@@ -16,7 +16,7 @@ export default class Header {
   }
 
   setOptions() {
-    //verifier les differents attributs data sur la composante
+    // check different data attributes on the component / verifier les differents attributs data sur la composante
     if ('autoHide' in this.element.dataset) {
       window.addEventListener('scroll', this.onScroll.bind(this));
     }
@@ -42,18 +42,20 @@ export default class Header {
 
   setDirections() {
     if (this.scrollPosition >= this.lastScrollPosition) {
-      //scroll vers le bas
+      // scroll towards the bottom / scroll vers le bas
       this.html.classList.add('is-scrolling-down');
       this.html.classList.remove('is-scrolling-up');
     } else {
-      //scroll vers le haut
+      //scroll towards the top / scroll vers le haut
       this.html.classList.add('is-scrolling-up');
       this.html.classList.remove('is-scrolling-down');
     }
   }
 
   initNavMobile() {
+    // add a class to switch in between desktop and mobile menu / ajoute une classe pour changer entre le menu desktop et mobile
     const toggle = this.element.querySelector('.js-toggle');
+    // make the button clickable / rendre le bouton cliquable
     toggle.addEventListener('click', this.onToggleNav.bind(this));
   }
 

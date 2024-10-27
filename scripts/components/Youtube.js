@@ -8,6 +8,7 @@ export default class Youtube {
     this.playerReady = false;
     this.options = {
       noControls: 1,
+      mute: 0,
     };
 
     Youtube.instances.push(this);
@@ -15,10 +16,11 @@ export default class Youtube {
     if (this.youtubeId) {
       Youtube.loadScript();
     } else {
-      console.error('Vous devez spécifier un iD');
+      /* console.error('Vous devez spécifier un iD'); */
     }
   }
   static loadScript() {
+    // get and initiate Youtube API / chercher et initié YouTube API
     if (!Youtube.scriptIsLoading) {
       Youtube.scriptIsLoading = true;
       const script = document.createElement('script');
@@ -41,11 +43,15 @@ export default class Youtube {
     if ('noControls' in this.element.dataset) {
       this.options.noControls = 0;
     }
+    if ('mute' in this.element.dataset) {
+      this.options.mute = 1;
+    }
   }
   initPlayer(event) {
     if (event) {
       this.element.removeEventListener('click', this.initPlayer);
     }
+    // render css of YouTube player in the page / rendu css du player YouTube dans la page
     this.player = new YT.Player(this.youtubeContainer, {
       height: '100%',
       width: '100%',
@@ -54,6 +60,7 @@ export default class Youtube {
         rel: 0,
         autoplay: this.autoplay,
         controls: this.options.noControls,
+        mute: this.options.mute,
       },
       events: {
         onReady: () => {
@@ -65,7 +72,7 @@ export default class Youtube {
         },
         onStateChange: (event) => {
           if (event.data == YT.PlayerState.PLAYING) {
-            // pause tous les videos SAUF celui qui joue
+            // pause all videos exept the one playing / pause tous les videos SAUF celui qui joue
             Youtube.pauseAll(this);
           } else if (event.data == YT.PlayerState.ENDED) {
             this.player.seekTo(0);
@@ -76,12 +83,14 @@ export default class Youtube {
     });
   }
   watch(entries) {
+    // if video leaves viewport, pause the video / si la vidéo quitte le viewport, pause la vidéo
     if (this.playerReady && !entries[0].isIntersecting) {
       this.player.pauseVideo();
     }
   }
 
   static initAll() {
+    //render all YouTube players in the page / rendu de touts les players YouTube dans la page
     document.documentElement.classList.add('is-youtube-ready');
     for (let i = 0; i < Youtube.instances.length; i++) {
       const instance = Youtube.instances[i];
@@ -89,6 +98,7 @@ export default class Youtube {
     }
   }
   static pauseAll(currentInstance) {
+    //pause all videos in the page, when page reloads or loads / pause touts les vidéos dans la page si la page recharge ou charge
     for (let i = 0; i < Youtube.instances.length; i++) {
       const instance = Youtube.instances[i];
       if (instance.playerReady && instance !== currentInstance) {

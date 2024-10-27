@@ -17,15 +17,13 @@ export default class Form {
   }
 
   onSubmit(event) {
-    event.preventDefault();
-
     if (this.validate()) {
       //success
-      console.log('submit success');
+     /*  console.log('submit success'); */
       this.showConfirmation();
     } else {
       //error
-      console.log('submit failed');
+      /* console.log('submit failed'); */
     }
   }
 
@@ -55,12 +53,14 @@ export default class Form {
   }
 
   addError(input) {
+    // display text error for errors in an input / afficher le texte d'erreur pour les erreurs dans un input
     const container =
       input.closest('[data-input-container]') || input.closest('.input');
     container.classList.add('error');
   }
 
   removeError(input) {
+    // remove text error / enlever le texte d'erreur
     const container =
       input.closest('[data-input-container]') || input.closest('.input');
     container.classList.remove('error');

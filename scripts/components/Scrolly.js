@@ -2,7 +2,7 @@ export default class Scrolly {
   constructor(element) {
     this.element = element;
     this.options = {
-      rootMargin: '0px',
+      rootMargin: '-50px',
       repeat: true,
     };
     this.init();
@@ -20,6 +20,7 @@ export default class Scrolly {
     }
   }
   setOptions() {
+    // make animations to NOT repeat / faire es animations à NE PAS répéter
     if ('noRepeat' in this.element.dataset) {
       this.options.repeat = false;
     }
