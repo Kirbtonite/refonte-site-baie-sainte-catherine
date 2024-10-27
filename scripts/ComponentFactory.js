@@ -31,7 +31,7 @@ export default class ComponentFactory {
         const instance = new this.componentList[componentName](element);
         this.componentInstances.push(instance);
       } else {
-        console.log(`La composante ${componentName} n'existe pas`);
+        /* console.log(`La composante ${componentName} n'existe pas`); */
       }
     }
   }
